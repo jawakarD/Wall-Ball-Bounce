@@ -1,0 +1,23 @@
+.box{
+    width: 400px;
+    height: 600px;
+    border: 3px solid black ;
+    position: relative;
+}
+
+
+.container{
+    margin: 40px;
+}
+
+.ball{
+    border: 2px solid red;
+    border-radius: 50%;
+    background-color: black;
+    width: 40px;
+    height: 40px;
+}
+
+.ball{
+    position: absolute;
+}

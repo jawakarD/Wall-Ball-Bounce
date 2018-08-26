@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Ball game</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <div class="ball"></div>
+            </div>
+        </div>
+    <script type="text/javascript">
+            $(document).ready(function(){
+
+
+
+                var ball = $(".ball");
+                let t =0;
+                let l=0;
+
+                pos1 = 'b';
+                pos2 = 'r';
+                setInterval(() => {
+
+                    if(t >= 560){
+                        pos1 = 't';
+                    }
+
+                    if(t<=0){
+                        pos1 = 'b';
+                    }
+                    if(l >= 360){
+                        pos2 = 'l';
+                    }
+
+                    if(l <= 0){
+                        pos2 = 'r';
+                    }
+
+                    if(pos1 == 'b'){
+                        t++;
+                    }else {
+                        t--;
+                    }
+
+                    if(pos2=='r'){
+                        l++;
+                    }else{
+                        l--;
+                    }
+
+                    ball.css('top',t);
+                    ball.css('left',l);
+                }) ;
+
+
+                // $(document).mousemove(function(event){
+                //     console.log(event.pageX +" " + ball.offset().left+" "+event.pageY+" "+ball.offset().top);
+                //     if(event.pageX+10 >=ball.offset().left &&  event.pageY+10 >=ball.offset().top){
+                //         ball.animate({
+                //             left : "+=10px"
+                //         },100,function(){
+                //             ball.animate({
+                //                 left : "-=10px"
+                //             });
+                //         });
+                //     }
+                // });
+
+
+
+            });
+    </script>
+
+    </body>
+</html>
